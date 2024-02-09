@@ -268,10 +268,10 @@ The *context* must store the reference for one of the *strategies*, delegating t
 The *context* isn't responsible for selecting the *strategy*, instead, it's injected as a dependency (or it could be automated somewhat in the interface). All *strategies* share the same interface, that exposes a single method for triggering the *strategy* for the *context*.
 This allows for an independent *context* and easy creation or modification of new *strategies*.
 
-!(https://refactoring.guru/images/patterns/diagrams/strategy/structure-indexed-2x.png)
+![strategy diagram](https://refactoring.guru/images/patterns/diagrams/strategy/structure-indexed-2x.png "Strategy pattern")
 
 <details>
-<summary>Diagram explanation</sumary>
+<summary>Diagram explanation</summary>
 
 1. The Context maintains a reference to one of the concrete strategies and communicates with this object only via the strategy interface.
 
