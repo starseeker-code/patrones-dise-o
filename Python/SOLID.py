@@ -1,7 +1,8 @@
 import abc
 
-
-# Single responsibility
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | Single responsibility |
+# |_______________________|
 
 ### Violation
 
@@ -68,19 +69,33 @@ class File(Reader, Compressor, Connector):
 
 
 
-# TODO: Principio 2 - Open/Closed
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | TODO: Principio 2 - Open/Closed |
+# |_________________________________|
 
 
 
-# TODO: Principio 3 - Liskov substitution
+
+
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | TODO: Principio 3 - Liskov substitution |
+# |_________________________________________|
 
 
 
-# TODO: Principio 4 - Interface segregation
+
+
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | TODO: Principio 4 - Interface segregation |
+# |___________________________________________|
 
 
 
-# TODO: Principio 5 - Dependency inversion (inyection)
+
+
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | TODO: Principio 5 - Dependency inversion (inyection) |
+# |______________________________________________________|
 
 
 
