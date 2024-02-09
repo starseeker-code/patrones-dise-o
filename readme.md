@@ -77,7 +77,12 @@ python <module_name>
 
 <details>
 <summary>Single responsibility</summary>
-...
+
+**Definition**
+> A class should have one and only one reason to change, meaning that a class should have only one job
+
+This principle aims to atomize the code into small, functional parts. Improves cohesion but usually introduces coupling by it's own.
+The main objective with this first principle is to achieve a well organized code that is easier to change and maintain while guaranteeing that each component has max cohesion.
 </details>
 
 <details>
