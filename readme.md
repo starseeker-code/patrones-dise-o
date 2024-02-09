@@ -1,5 +1,7 @@
 # Design patterns - A review with different languages
 
+**Author**: [Joaquin Hernandez Martinez](https://github.com/starseeker-code)
+
 This is a personal repository aiming to document and store all main design patterns in Python, Typescript, Go and Rust programming languages. A comprehensive index will be provided in order to navigate this repository.
 
 ## Index
@@ -87,22 +89,42 @@ The main objective with this first principle is to achieve a well organized code
 
 <details>
 <summary>Open/Closed</summary>
-...
+
+**Definition**
+> Objects or entities should be open for extension but closed for modification
+
+This principle allows for code evolution without introducing breaking changes. While it introduces more coupling, it allows for nice tree-like structures of inheritance. Badly done, it'll form a spagghetti anti-pattern.
+
 </details>
 
 <details>
 <summary>Liskov substitution</summary>
-...
+
+**Definition**
+> Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T
+
+Meaning that every child class should be blindly substitutable for their parent class. This culminates into duck typing, that Python already implements. Thus, the only care needed is to define correct interfaces.
+
 </details>
 
 <details>
 <summary>Interface segregation</summary>
-...
+
+**Definition**
+> A class should never be forced to implement an interface that it doesn’t use, or classes shouldn’t be forced to depend on methods they do not use
+
+Basic principle of abstraction and decoupling. Avoids inheritance or mappings to unnecesary interfaces, segregating them according to functional dependencies of child classes.
+
 </details>
 
 <details>
 <summary>Dependency inversion</summary>
-...
+
+**Definition**
+> Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions
+
+Very useful technique (dependency injection) that allows for complete decoupling between behaviour and implementation. Done right, it could provide strongly abstracted code while maintaining high cohesion (and low coupling).
+
 </details>
 
 ## Factory
