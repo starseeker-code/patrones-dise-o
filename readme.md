@@ -7,7 +7,7 @@ This is a personal repository aiming to document and store all main design patte
 ### Creational patterns
 
 * [Factory](#factory) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
-* [Abstract factory](#abstract---> factory) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
+* [Abstract factory](#abstract-factory) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Builder](#builder) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Prototype](#prototype) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Singleton](#singleton) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
@@ -44,152 +44,152 @@ This is a personal repository aiming to document and store all main design patte
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Abstract factory
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Builder
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Prototype
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Singleton
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Adapter
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Bridge
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Composite
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Decorator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Facade
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Flyweight
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Proxy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Chain of responsibility
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Command
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Iterator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Mediator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Memento
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Observer
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## State
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Strategy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Template
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
 ## Visitor
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-[Index](#index)
+<a style="font-size:0.5em;">Return to Index href="#index"</a>
 
