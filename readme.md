@@ -44,152 +44,152 @@ This is a personal repository aiming to document and store all main design patte
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Abstract factory
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Builder
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Prototype
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Singleton
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Adapter
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Bridge
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Composite
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Decorator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Facade
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Flyweight
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Proxy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Chain of responsibility
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Command
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Iterator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Mediator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Memento
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Observer
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## State
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Strategy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Template
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
 ## Visitor
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a style="font-size:0.5em;">Return to Index href="#index"</a>
+<a style="font-size:0.5em;" href="#index">Return to Index</a>
 
