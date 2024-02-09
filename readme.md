@@ -2,7 +2,6 @@
 span {
     font-size:0.5em;
 }
-</style>
 
 # Design patterns - A review with different languages
 
@@ -199,3 +198,5 @@ This is a personal repository aiming to document and store all main design patte
 
 <span style="font-size:0.5em;"><a href="#index">Return to Index</a></span>
 
+
+</style>
