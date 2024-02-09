@@ -75,6 +75,7 @@ other_instance = Sorter(MergeSort(), unsorted_list)  # Sorter can be instantiate
 other_instance.sort()  # It's a good practice to have default behaviour
 
 
+# Code for tests
 if __name__ == "__main__":
     test_data = [0, -11, 3.2, 60, 29, 96, -19, 8, 19, 7.1, 48, 58, 2.8, -81, 24, 84, 5.0, 9, 29, 103.462, 8,
                    60, 8.2, 34, 85, 100, -5.2, 28, 60, 88, 76, 8, 30.42, 79, -22, 40, 54, 0, 18, 89, -43.0031,
