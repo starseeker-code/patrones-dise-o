@@ -39,6 +39,32 @@ This is a personal repository aiming to document and store all main design patte
 
 ...
 
+## How to run the code
+
+### Python
+
+Python is an interpreted language (requires a Python 3.12+ interpreter) that [can be found here](https://www.python.org/downloads/).
+
+An online Python interpreter [may be found here](https://www.programiz.com/python-programming/online-compiler/) for code inspection and run.
+
+Each python script includes an entrypoint for module testing. The way of running a module is by calling it:
+
+```bash
+python <module_name>
+```
+
+### Typescript
+
+
+
+### Go
+
+
+
+### Rust
+
+
+
 ## Factory
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
