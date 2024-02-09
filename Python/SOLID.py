@@ -73,6 +73,12 @@ class File(Reader, Compressor, Connector):
 # | TODO: Principio 2 - Open/Closed |
 # |_________________________________|
 
+### Violation
+
+
+
+### Correct design
+
 
 
 
@@ -80,6 +86,12 @@ class File(Reader, Compressor, Connector):
 # |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 # | TODO: Principio 3 - Liskov substitution |
 # |_________________________________________|
+
+### Violation
+
+
+
+### Correct design
 
 
 
@@ -89,6 +101,12 @@ class File(Reader, Compressor, Connector):
 # | TODO: Principio 4 - Interface segregation |
 # |___________________________________________|
 
+### Violation
+
+
+
+### Correct design
+
 
 
 
@@ -96,6 +114,12 @@ class File(Reader, Compressor, Connector):
 # |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 # | TODO: Principio 5 - Dependency inversion (inyection) |
 # |______________________________________________________|
+
+### Violation
+
+
+
+### Correct design
 
 
 
