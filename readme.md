@@ -44,175 +44,153 @@ This is a personal repository aiming to document and store all main design patte
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Abstract factory
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Builder
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Prototype
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Singleton
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Adapter
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Bridge
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Composite
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Decorator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Facade
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Flyweight
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Proxy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Chain of responsibility
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Command
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Iterator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Mediator
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Memento
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Observer
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## State
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Strategy
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Template
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Visitor
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
-<a href="#index">⬆ 
- <sub>Return to Index</sub></a>
+<a href="#index"><sub>⬆ Return to Index</sub></a>
 
 
