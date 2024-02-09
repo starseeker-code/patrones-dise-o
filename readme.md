@@ -33,7 +33,7 @@ This is a personal repository aiming to document and store all main design patte
 * [Memento](#memento) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Observer](#observer) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [State](#state) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
-* [Strategy](#strategy) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
+* [Strategy](#strategy) --->  [Python](https://github.com/starseeker-code/patrones-diseno/blob/main/Python/strategy.py) | [Typescript]() | [Go]() | [Rust]()
 * [Template](#template) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Visitor](#visitor) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 
@@ -261,9 +261,58 @@ Very useful technique (dependency injection) that allows for complete decoupling
 <a href="#index"><sub>⬆ Return to Index</sub></a>
 
 ## Strategy
-[Python]() | [Typescript]() | [Go]() | [Rust]()
+[Python](https://github.com/starseeker-code/patrones-diseno/blob/main/Python/strategy.py) | [Typescript]() | [Go]() | [Rust]()
 
-...
+The strategy pattern separates the different behaviour algorithms (strategies) for a concrete class (context).
+The *context* must store the reference for one of the *strategies*, delegating the behaviour to a linked *strategy object*, decoupling it.
+The *context* isn't responsible for selecting the *strategy*, instead, it's injected as a dependency (or it could be automated somewhat in the interface). All *strategies* share the same interface, that exposes a single method for triggering the *strategy* for the *context*.
+This allows for an independent *context* and easy creation or modification of new *strategies*.
+
+(!https://refactoring.guru/images/patterns/diagrams/strategy/structure-indexed-2x.png)
+
+<details>
+<summary>Diagram explanation</sumary>
+1. The Context maintains a reference to one of the concrete strategies and communicates with this object only via the strategy interface.
+
+2. The Strategy interface is common to all concrete strategies. It declares a method the context uses to execute a strategy.
+
+3. Concrete Strategies implement different variations of an algorithm the context uses.
+
+4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn’t know what type of strategy it works with or how the algorithm is executed.
+
+5. The Client creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
+<details>
+
+**How to implement the pattern**
+
+1. In the context class, identify an algorithm that’s prone to frequent changes. It may also be a massive conditional that selects and executes a variant of the same algorithm at runtime.
+
+2. Declare the strategy interface common to all variants of the algorithm.
+
+3. One by one, extract all algorithms into their own classes. They should all implement the strategy interface.
+
+4. In the context class, add a field for storing a reference to a strategy object. Provide a setter for replacing values of that field. The context should work with the strategy object only via the strategy interface. The context may define an interface which lets the strategy access its data.
+
+5. Clients of the context must associate it with a suitable strategy that matches the way they expect the context to perform its primary job.
+
+**When to use it and gotchas**
+
+* It lets you indirectly alter the object’s behavior at runtime by associating it with different sub-objects which can perform specific sub-tasks in different ways
+
+* It's perfect for extracting the varying behavior into a separate class hierarchy and combine the original classes into one, thereby reducing duplicate code
+
+* Allows for code isolation, internal data, and dependencies of various algorithms from the rest of the code. Various clients get a simple interface to execute the algorithms and switch them at runtime
+
+* It's perfect for long if-else statements, because it extracts all algorithms into separate classes, all of which implement the same interface. The original object delegates execution to one of these objects, instead of implementing all variants of the algorithm
+
+---  
+
+* If you only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern
+
+* Clients must be aware of the differences between strategies to be able to select a proper one
+
+* There's usually code patterns (pattern matching, functional programming, lambdas and arrow functions, ...) that don't involve extra classes and inheritance, providing a good mid-ground solution
+
 
 <a href="#index"><sub>⬆ Return to Index</sub></a>
 
