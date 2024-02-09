@@ -1,3 +1,9 @@
+<style>
+span {
+    font-size:0.5em;
+}
+</style>
+
 # Design patterns - A review with different languages
 
 This is a personal repository aiming to document and store all main design patterns in Python, Typescript, Go and Rust programming languages. A comprehensive index will be provided in order to navigate this repository.
