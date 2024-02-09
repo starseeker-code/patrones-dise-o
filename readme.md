@@ -65,6 +65,36 @@ python <module_name>
 
 
 
+## SOLID principles
+[Python]() | [Typescript]() | [Go]() | [Rust]()
+
+...
+
+<details>
+<summary>Single responsibility</summary>
+...
+</details>
+
+<details>
+<summary>Open/Closed</summary>
+...
+</details>
+
+<details>
+<summary>Liskov substitution</summary>
+...
+</details>
+
+<details>
+<summary>Interface segregation</summary>
+...
+</details>
+
+<details>
+<summary>Dependency inversion</summary>
+...
+</details>
+
 ## Factory
 [Python]() | [Typescript]() | [Go]() | [Rust]()
 
