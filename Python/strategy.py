@@ -13,8 +13,14 @@ class IStrategy(abc.ABC):
 
 class SelectionSort(IStrategy):
     def sorting_algorithm(self, data):
-        return ...
-    
+        data = list(data)
+        result = []
+        while data:  # xrange() is also a good option
+            pivot_number = min(data)
+            result.append(pivot_number)
+            data.pop(data.index(pivot_number))
+        return result
+
 class BucketSort(IStrategy):
     def sorting_algorithm(self, data):
         return ...
@@ -42,7 +48,7 @@ class TimSort(IStrategy):
 # 3 - Create the context
 
 class Sorter:
-    def __init__(self, strategy: IStrategy, data: Sequence[Number] = None):
+    def __init__(self, strategy: IStrategy = SelectionSort(), data: Sequence[Number] = None):
         self._strategy = strategy
         self._data = data
     
@@ -77,17 +83,17 @@ other_instance.sort()  # It's a good practice to have default behaviour
 
 # Code for tests
 if __name__ == "__main__":
-    test_data = [0, -11, 3.2, 60, 29, 96, -19, 8, 19, 7.1, 48, 58, 2.8, -81, 24, 84, 5.0, 9, 29, 103.462, 8,
+    test_data = (0, -11, 3.2, 60, 29, 96, -19, 8, 19, 7.1, 48, 58, 2.8, -81, 24, 84, 5.0, 9, 29, 103.462, 8,
                    60, 8.2, 34, 85, 100, -5.2, 28, 60, 88, 76, 8, 30.42, 79, -22, 40, 54, 0, 18, 89, -43.0031,
-                   59, 71, 70.49, 45, 63, 63, 51, 71, 38, 48, 58, 24, 87, 79, 26, 51, 43, 22, 11, 14, 19, 85]
+                   59, 71, 70.49, 45, 63, 63, 51, 71, 38, 48, 58, 24, 87, 79, 26, 51, 43, 22, 11, 14, 19, 85)
     # Instantiation test
     test = Sorter(data=test_data)
+    test.sort()
     print(test)
     # Algorithm test
-    print(Sorter(BucketSort(), test_data))
-    print(Sorter(HeapSort(), test_data))
-    print(Sorter(QuickSort(), test_data))
-    print(Sorter(RadixSort(), test_data))
-    print(Sorter(MergeSort(), test_data))
-    print(Sorter(TimSort(), test_data))
-    
+    print(Sorter(BucketSort(), test_data).sort())
+    print(Sorter(HeapSort(), test_data).sort())
+    print(Sorter(QuickSort(), test_data).sort())
+    print(Sorter(RadixSort(), test_data).sort())
+    print(Sorter(MergeSort(), test_data).sort())
+    print(Sorter(TimSort(), test_data).sort())
