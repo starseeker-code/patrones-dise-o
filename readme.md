@@ -1,4 +1,4 @@
-<style>
+<style type="text/css">
 span {
     font-size:0.5em;
 }
