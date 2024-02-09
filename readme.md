@@ -6,7 +6,7 @@ This is a personal repository aiming to document and store all main design patte
 
 ### Creational patterns
 
-* [Factory](#factory) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
+* [Factory](#factory) --->  [Python](https://github.com/starseeker-code/patrones-diseno/blob/main/Python/factory.py) | [Typescript]() | [Go]() | [Rust]()
 * [Abstract factory](#abstract-factory) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Builder](#builder) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
 * [Prototype](#prototype) --->  [Python]() | [Typescript]() | [Go]() | [Rust]()
@@ -41,7 +41,8 @@ This is a personal repository aiming to document and store all main design patte
 
 ## How to run the code
 
-### Python
+<details>
+<summary>Python</summary>
 
 Python is an interpreted language (requires a Python 3.12+ interpreter) that [can be found here](https://www.python.org/downloads/).
 
@@ -52,21 +53,25 @@ Each python script includes an entrypoint for module testing. The way of running
 ```bash
 python <module_name>
 ```
+</details>
 
-### Typescript
+<details>
+<summary>Typescript</summary>
+...
+</details>
 
+<details>
+<summary>Go</summary>
+...
+</details>
 
-
-### Go
-
-
-
-### Rust
-
-
+<details>
+<summary>Rust</summary>
+...
+</details>
 
 ## SOLID principles
-[Python]() | [Typescript]() | [Go]() | [Rust]()
+[Python](https://github.com/starseeker-code/patrones-diseno/blob/main/Python/SOLID.py) | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
@@ -96,7 +101,7 @@ python <module_name>
 </details>
 
 ## Factory
-[Python]() | [Typescript]() | [Go]() | [Rust]()
+[Python](https://github.com/starseeker-code/patrones-diseno/blob/main/Python/factory.py) | [Typescript]() | [Go]() | [Rust]()
 
 ...
 
