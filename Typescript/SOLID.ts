@@ -1,18 +1,40 @@
-// TODO: Principio 1 - Single responsibility
+/*|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+  | TODO: Principio 1 - Single responsibility |
+  |___________________________________________|*/
 
 
 
-// TODO: Principio 2 - Open/Closed
 
 
 
-// TODO: Principio 3 - Liskov substitution
+/*|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+  | TODO: Principio 2 - Open/Closed |
+  |_________________________________|*/
 
 
 
-// TODO: Principio 4 - Interface segregation
 
 
 
-// TODO: Principio 5 - Dependency inversion (inyection)
+/*|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+  | TODO: Principio 3 - Liskov substitution |
+  |_________________________________________|*/
+
+
+
+
+
+
+/*|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+  | TODO: Principio 4 - Interface segregation |
+  |___________________________________________|*/
+
+
+
+
+
+  
+/*|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+  | TODO: Principio 5 - Dependency inversion (inyection) |
+  |______________________________________________________|*/
 
