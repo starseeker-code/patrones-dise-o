@@ -268,10 +268,11 @@ The *context* must store the reference for one of the *strategies*, delegating t
 The *context* isn't responsible for selecting the *strategy*, instead, it's injected as a dependency (or it could be automated somewhat in the interface). All *strategies* share the same interface, that exposes a single method for triggering the *strategy* for the *context*.
 This allows for an independent *context* and easy creation or modification of new *strategies*.
 
-(!https://refactoring.guru/images/patterns/diagrams/strategy/structure-indexed-2x.png)
+!(https://refactoring.guru/images/patterns/diagrams/strategy/structure-indexed-2x.png)
 
 <details>
 <summary>Diagram explanation</sumary>
+
 1. The Context maintains a reference to one of the concrete strategies and communicates with this object only via the strategy interface.
 
 2. The Strategy interface is common to all concrete strategies. It declares a method the context uses to execute a strategy.
@@ -281,7 +282,7 @@ This allows for an independent *context* and easy creation or modification of ne
 4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn’t know what type of strategy it works with or how the algorithm is executed.
 
 5. The Client creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
-<details>
+</details>
 
 **How to implement the pattern**
 
