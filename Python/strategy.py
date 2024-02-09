@@ -20,10 +20,6 @@ class SelectionSort(IStrategy):
             result.append(pivot_number)
             data.pop(data.index(pivot_number))
         return result
-
-class BucketSort(IStrategy):
-    def sorting_algorithm(self, data):
-        return ...
     
 class HeapSort(IStrategy):
     def sorting_algorithm(self, data):
@@ -31,7 +27,13 @@ class HeapSort(IStrategy):
     
 class QuickSort(IStrategy):
     def sorting_algorithm(self, data):
-        return ...
+        if len(data) <= 1:  # Check for extreme case empty sequence or single item one
+            return data
+        pivot = data[len(data) // 2]  # Divides in half the sequence
+        left = [number for number in data if number < pivot]  # Groups numbers that are LESS than the pivot
+        mid = [number for number in data if number == pivot]  # Groups numbers the pivot itself
+        right = [number for number in data if number > pivot]  # Groups numbers that are MORE than the pivot
+        return self.sorting_algorithm(left) + mid + self.sorting_algorithm(right)  # Recursively does the same until it adds 1-item ordered lists
     
 class RadixSort(IStrategy):
     def sorting_algorithm(self, data):
@@ -91,7 +93,6 @@ if __name__ == "__main__":
     test.sort()
     print(test)
     # Algorithm test
-    print(Sorter(BucketSort(), test_data).sort())
     print(Sorter(HeapSort(), test_data).sort())
     print(Sorter(QuickSort(), test_data).sort())
     print(Sorter(RadixSort(), test_data).sort())
