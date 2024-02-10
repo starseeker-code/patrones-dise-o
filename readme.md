@@ -39,7 +39,11 @@ This is a personal repository aiming to document and store all main design patte
 
 ## Introduction
 
-...
+Design patterns are time-tested code patterns that most senior developers tend to abstractly have in common when thinking about programming with the SOLID principles in mind. They're language-agnostic abstractions that provide a customizable blueprint for recurring design problems in development projects.
+
+These aren't meant to be copied and used, that's an anti-pattern by itself. Design patterns offer tradeoffs that need to be considered when using them, and are more like abstract tools and blueprints, rather than concrete solutions.
+
+*Although here it's offered a object-oriented, highly abstracted design patterns, most of them can be simplified to functional programming or even basic data types (like a clever use of a dictionary or a struct)*
 
 ## How to run the code
 
