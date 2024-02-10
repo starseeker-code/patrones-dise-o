@@ -129,9 +129,9 @@ class DataUser(IUser):
 
 
 
-# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
-# | TODO: Principio 3 - Liskov substitution |
-# |_________________________________________|
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | Liskov substitution |
+# |_____________________|
 
 ### Violation
 
