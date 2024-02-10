@@ -95,7 +95,7 @@ The main objective with this first principle is to achieve a well organized code
 <summary>Open/Closed</summary>
 
 **Definition**
-> Objects or entities should be open for extension but closed for modification
+> Objects should be open for extension but closed for modification
 
 This principle allows for code evolution without introducing breaking changes. While it introduces more coupling, it allows for nice tree-like structures of inheritance. Badly done, it'll form a spagghetti anti-pattern.
 

@@ -58,7 +58,7 @@ class Connector(abc.ABC):
         except ConnectionError:
             ...
         
-class File(Reader, Compressor, Connector):
+class File(Reader, Compressor, Connector):  # This way behaviour is spread between cohesionated classes and aggregated in a composed, final File class
     def __init__(self, path: str, size: int = 0):
         self.path = path
         self.size = size
@@ -69,17 +69,56 @@ class File(Reader, Compressor, Connector):
 
 
 
-# |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
-# | TODO: Principio 2 - Open/Closed |
-# |_________________________________|
+# |‾‾‾‾‾‾‾‾‾‾‾‾‾|
+# | Open/Closed |
+# |_____________|
 
 ### Violation
-
-
+    
+class AdminUser:
+    def access_database(self):
+        print("I have unrestricted access to the database")
+    
+class NormalUser:
+    def access_database(self):
+        print("I have no permissions to write or read the database")
+    
+class UserService:
+    def __init__(self, user_type: str = "normal"):
+        self.user_type = user_type.lower()
+        
+    def check_privileges(self):  # In case a third user is to be added, this design forces changes in the UserService class, and shouldn't happen
+        if self.user_type == "normal":
+            print("I have no permissions to write or read the database")
+        elif self.user_type == "admin":
+            print("I have unrestricted access to the database")
 
 ### Correct design
 
+class IUser(abc.ABC):
+    @abc.abstractmethod
+    def access_database(self):
+        pass
 
+class AdminUser(IUser):
+    def access_database(self):
+        print("I have unrestricted access to the database")
+    
+class NormalUser(IUser):
+    def access_database(self):
+        print("I have no permissions to write or read the database")
+        
+class UserService:
+    def __init__(self, user_type: IUser = NormalUser()):
+        self.user_type = user_type
+        
+    def check_privileges(self):
+        self.user_type.access_database()
+        
+# And now, adding a new user type is as simple as extending the IUser interface with a DataUser. No modification is needed
+class DataUser(IUser):
+    def access_database(self):
+        print("I can only read the database, but not write")
 
 
 
