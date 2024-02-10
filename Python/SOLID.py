@@ -108,12 +108,19 @@ class NormalUser(IUser):
     def access_database(self):
         print("I have no permissions to write or read the database")
         
-class UserService:
-    def __init__(self, user_type: IUser = NormalUser()):
-        self.user_type = user_type
+class CurrentUser:  # This class will be the connection between the user types and the UserService
+    @property
+    def user_type(self):
+        return NormalUser()
         
-    def check_privileges(self):
-        self.user_type.access_database()
+    @user_type.setter
+    def user_type(self, user_type: IUser = NormalUser()):
+        self.user_type = user_type
+
+class UserService:
+    @staticmethod
+    def check_privileges():
+        CurrentUser().user_type.access_database()
         
 # And now, adding a new user type is as simple as extending the IUser interface with a DataUser. No modification is needed
 class DataUser(IUser):
