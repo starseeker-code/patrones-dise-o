@@ -149,7 +149,73 @@ class DataUser(IUser):
 
 ### Violation
 
+class IFileHandler(abc.ABC):
+    def encryption_system(self):
+        encrypt()
 
+    @abc.abstractmethod
+    def connect_to_db(self, db_address):
+        pass
+
+    @abc.abstractmethod
+    def convert_audio(self, audio_format):
+        pass
+
+    @abc.abstractmethod
+    def convert_video(self, video_format):
+        pass
+
+    @abc.abstractstaticmethod
+    def play():
+        pass
+
+class DBConnection(IFileHandler):
+    def __init__(self):
+        try:
+            self.encryption_system()
+        except ValueError as error:
+            print("There was an error with the user authentication")
+            print(error)
+    
+    def connect_to_db(self, db_address):
+        try:
+            connect(db_address)
+        except ValueError:
+            print("The database address is not valid")
+
+class AudioFile(IFileHandler):
+    def __init__(self, format: str):
+        self.format = format
+        try:
+            self.encryption_system()
+        except ValueError as error:
+            print("There was an error with the encryption key")
+            print(error)
+    
+    def convert_audio(self, audio_format: str):
+        if audio_format in VALID_AUDIO_FORMATS:
+            self.format = audio_format
+
+    @staticmethod
+    def play():
+        print("Playing the audio file")
+
+class VideoFile(IFileHandler):
+    def __init__(self, format: str):
+        self.format = format
+        try:
+            self.encryption_system()
+        except ValueError as error:
+            print("There was an error with the encryption key")
+            print(error)
+    
+    def convert_audio(self, video_format: str):
+        if video_format in VALID_VIDEO_FORMATS:
+            self.format = video_format
+
+    @staticmethod
+    def play():
+        print("Playing the video file")
 
 ### Correct design
 
@@ -265,6 +331,12 @@ class DataUser(IUser):
 
 
 
-
-def connect(arg):  # Ignore this function, used in example
+# Ignore this functions, used in examples
+def connect(arg):
     pass
+
+def encrypt():
+    pass
+
+VALID_AUDIO_FORMATS = ()
+VALID_VIDEO_FORMATS = ()
