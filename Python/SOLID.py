@@ -1,4 +1,5 @@
 import abc
+from typing import Self
 
 # |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 # | Single responsibility |
@@ -150,8 +151,8 @@ class DataUser(IUser):
 ### Violation
 
 class IFileHandler(abc.ABC):
-    def encryption_system(self):
-        encrypt()
+    def authenticate(self):
+        auth_user(self._id)
 
     @abc.abstractmethod
     def connect_to_db(self, db_address):
@@ -170,7 +171,68 @@ class IFileHandler(abc.ABC):
         pass
 
 class DBConnection(IFileHandler):
-    def __init__(self):
+    def __init__(self, id):
+        self._id = id
+        try:
+            self.authenticate()
+        except ValueError as error:
+            print("There was an error with the user authentication")
+            print(error)
+    
+    def connect_to_db(self, db_address):
+        try:
+            connect(db_address)
+        except ValueError:
+            print("The database address is not valid")
+
+class AudioFile(IFileHandler):
+    def __init__(self, format: str):
+        self.format = format
+    
+    def convert_audio(self, audio_format: str):
+        if audio_format in VALID_AUDIO_FORMATS:
+            self.format = audio_format
+
+    @staticmethod
+    def play():
+        print("Playing the audio file")
+
+class VideoFile(IFileHandler):
+    def __init__(self, format: str):
+        self.format = format
+    
+    def convert_audio(self, video_format: str):
+        if video_format in VALID_VIDEO_FORMATS:
+            self.format = video_format
+
+    @staticmethod
+    def play():
+        print("Playing the video file")
+
+### Correct design
+
+class IAuthenticate(abc.ABC):
+    def authenticate(self):
+        auth_user(self._id)
+
+class IPlayable(abc.ABC):
+    @abc.abstractstaticmethod
+    def play():
+        pass
+
+class IAudioConverter(abc.ABC):
+    @abc.abstractmethod
+    def convert_audio(self, audio_format):
+        pass
+
+class IVideoConverter(abc.ABC):
+    @abc.abstractmethod
+    def convert_video(self, video_format):
+        pass
+
+class DBConnection(IAuthenticate):
+    def __init__(self, id):
+        self._id = id
         try:
             self.encryption_system()
         except ValueError as error:
@@ -183,7 +245,7 @@ class DBConnection(IFileHandler):
         except ValueError:
             print("The database address is not valid")
 
-class AudioFile(IFileHandler):
+class AudioFile(IPlayable, IAudioConverter):
     def __init__(self, format: str):
         self.format = format
         try:
@@ -200,7 +262,7 @@ class AudioFile(IFileHandler):
     def play():
         print("Playing the audio file")
 
-class VideoFile(IFileHandler):
+class VideoFile(IPlayable, IVideoConverter):
     def __init__(self, format: str):
         self.format = format
         try:
@@ -216,9 +278,6 @@ class VideoFile(IFileHandler):
     @staticmethod
     def play():
         print("Playing the video file")
-
-### Correct design
-
 
 
 
@@ -335,7 +394,7 @@ class VideoFile(IFileHandler):
 def connect(arg):
     pass
 
-def encrypt():
+def auth_user():
     pass
 
 VALID_AUDIO_FORMATS = ()
