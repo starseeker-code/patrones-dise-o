@@ -12,7 +12,7 @@ class IStrategy(abc.ABC):
 # 2 - Create the strategies
 
 class SelectionSort(IStrategy):
-    def sorting_algorithm(self, data):
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         data = list(data)
         result = []
         while data:  # xrange() is also a good option
@@ -22,11 +22,11 @@ class SelectionSort(IStrategy):
         return result
     
 class HeapSort(IStrategy):
-    def sorting_algorithm(self, data):
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         return ...
     
 class QuickSort(IStrategy):
-    def sorting_algorithm(self, data):
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         if len(data) <= 1:  # Check for extreme case empty sequence or single item one
             return data
         pivot = data[len(data) // 2]  # Divides in half the sequence
@@ -36,15 +36,38 @@ class QuickSort(IStrategy):
         return self.sorting_algorithm(left) + mid + self.sorting_algorithm(right)  # Recursively does the same until it adds 1-item ordered lists
     
 class RadixSort(IStrategy):
-    def sorting_algorithm(self, data):
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         return ...
     
 class MergeSort(IStrategy):
-    def sorting_algorithm(self, data):
-        return ...
+    @staticmethod
+    def merge(left: Sequence[Number], right: Sequence[Number]) -> list[Number]:
+        order = lambda x, y: x < y  # Compares 1-sized sequences two elements at a time, and orders them
+        result = []  # Stores the ordered results
+        index_left = index_right = 0  # References to the index position of the sequence elements
+        while index_left < len(left) and index_right < len(right):
+            if order(left[index_left], right[index_right]):  # If x < y appends x and shifts to next number to the left
+                result.append(left[index_left])
+                index_left += 1
+            else:  # If x > y appends y and shifts to next number to the right
+                result.append(right[index_right])
+                index_right += 1
+        result.extend(left[index_left:])
+        result.extend(right[index_right:])
+        return result
+    
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
+        if len(data) <= 1:
+            return list(data)  # Trivial return
+        middle = len(data) // 2  # Divides in half the sequence
+        left = data[:middle]
+        right = data[middle:]
+        left = self.sorting_algorithm(left)  # Starts sorting the two halfs, recursively
+        right = self.sorting_algorithm(right)
+        return self.merge(left, right)  # Joins the (sorted) pieces of the sequence
     
 class TimSort(IStrategy):
-    def sorting_algorithm(self, data):
+    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         return ...
 
 # 3 - Create the context
