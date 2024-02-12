@@ -155,15 +155,15 @@ class IFileHandler(abc.ABC):
         auth_user(self._id)
 
     @abc.abstractmethod
-    def connect_to_db(self, db_address):
+    def connect_to_db(self, db_address: int):
         pass
 
     @abc.abstractmethod
-    def convert_audio(self, audio_format):
+    def convert_audio(self, audio_format: str):
         pass
 
     @abc.abstractmethod
-    def convert_video(self, video_format):
+    def convert_video(self, video_format: str):
         pass
 
     @abc.abstractstaticmethod
@@ -171,7 +171,7 @@ class IFileHandler(abc.ABC):
         pass
 
 class DBConnection(IFileHandler):
-    def __init__(self, id):
+    def __init__(self, id: int):
         self._id = id
         try:
             self.authenticate()
@@ -179,7 +179,7 @@ class DBConnection(IFileHandler):
             print("There was an error with the user authentication")
             print(error)
     
-    def connect_to_db(self, db_address):
+    def connect_to_db(self, db_address: str):
         try:
             connect(db_address)
         except ValueError:
@@ -222,24 +222,24 @@ class IPlayable(abc.ABC):
 
 class IAudioConverter(abc.ABC):
     @abc.abstractmethod
-    def convert_audio(self, audio_format):
+    def convert_audio(self, audio_format: str):
         pass
 
 class IVideoConverter(abc.ABC):
     @abc.abstractmethod
-    def convert_video(self, video_format):
+    def convert_video(self, video_format: str):
         pass
 
 class DBConnection(IAuthenticate):
-    def __init__(self, id):
+    def __init__(self, id: int):
         self._id = id
         try:
-            self.encryption_system()
+            self.authenticate()
         except ValueError as error:
             print("There was an error with the user authentication")
             print(error)
     
-    def connect_to_db(self, db_address):
+    def connect_to_db(self, db_address: str):
         try:
             connect(db_address)
         except ValueError:
@@ -248,11 +248,6 @@ class DBConnection(IAuthenticate):
 class AudioFile(IPlayable, IAudioConverter):
     def __init__(self, format: str):
         self.format = format
-        try:
-            self.encryption_system()
-        except ValueError as error:
-            print("There was an error with the encryption key")
-            print(error)
     
     def convert_audio(self, audio_format: str):
         if audio_format in VALID_AUDIO_FORMATS:
@@ -265,11 +260,6 @@ class AudioFile(IPlayable, IAudioConverter):
 class VideoFile(IPlayable, IVideoConverter):
     def __init__(self, format: str):
         self.format = format
-        try:
-            self.encryption_system()
-        except ValueError as error:
-            print("There was an error with the encryption key")
-            print(error)
     
     def convert_audio(self, video_format: str):
         if video_format in VALID_VIDEO_FORMATS:
@@ -394,8 +384,8 @@ class VideoFile(IPlayable, IVideoConverter):
 def connect(arg):
     pass
 
-def auth_user():
+def auth_user(arg):
     pass
 
-VALID_AUDIO_FORMATS = ()
-VALID_VIDEO_FORMATS = ()
+VALID_AUDIO_FORMATS = ("mp3")
+VALID_VIDEO_FORMATS = ("mp4")
