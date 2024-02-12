@@ -230,7 +230,7 @@ class IVideoConverter(abc.ABC):
     def convert_video(self, video_format: str):
         pass
 
-class DBConnection(IAuthenticate):
+class DBConnection(IAuthenticate):  # Only uses the interface needed
     def __init__(self, id: int):
         self._id = id
         try:
@@ -245,7 +245,7 @@ class DBConnection(IAuthenticate):
         except ValueError:
             print("The database address is not valid")
 
-class AudioFile(IPlayable, IAudioConverter):
+class AudioFile(IPlayable, IAudioConverter):  # Only uses the interface needed
     def __init__(self, format: str):
         self.format = format
     
@@ -271,20 +271,73 @@ class VideoFile(IPlayable, IVideoConverter):
 
 
 
-
 # |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
 # | Dependency inversion (inyection) |
 # |__________________________________|
 
 ### Violation
 
-
+class ToggleButton:
+    def __init__(self, state: bool = True):
+        self.state = state
+        
+    def switch(self):  # The logic is inside the button, not in the interface
+        self.state = not self.state
+        
+    def __str__(self) -> str:
+        on_off = "ON" if self.state else "OFF"
+        return f"This button is {on_off}"
+    
+class Window:
+    def __init__(self, x: int, y: int):
+        self.x = x
+        self.y = y
+        self.button = ToggleButton()  # The button is deeply coupled
+        
+    def useButton(self):
+        self.button.switch()
+        print(self.button)
 
 ### Correct design
 
+class ISwitchable(abc.ABC):
+    def __init__(self):
+        self.state = True
+        
+    def switch(self):
+        self.state = not self.state
+        
+    def __str__(self) -> str:
+        on_off = "ON" if self.state else "OFF"
+        return f"This button is {on_off}"
 
+class ToggleButton(ISwitchable):
+    def __init__(self, state: bool = True):
+        self.state = state
+    
+class Window:
+    def __init__(self, x: int, y: int, button: ISwitchable):  # Injected a switchable as dependency
+        self.x = x
+        self.y = y
+        self.button = button  # This could be any button
+        
+    def useButton(self):
+        self.button.switch()
+        print(self.button)
+        
+    def changeButton(self, new_button: ISwitchable):
+        self.button = new_button
 
+# Now it's easy to add new, functional components
+class RadialButton(ISwitchable):
+    def __init__(self, radio: int = 1):
+        super().__init__()
+        self.radio = radio
 
+class CheckButton(ISwitchable):
+    def __init__(self, check_mark: str = "✓"):
+        super().__init__()
+        self.check_mark = check_mark
 
 
 
