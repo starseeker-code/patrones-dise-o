@@ -1,6 +1,7 @@
 import abc
 from numbers import Number
 from typing import Sequence
+import heapq
 
 # 1 - Create the interface for the strategies 
 
@@ -23,7 +24,9 @@ class SelectionSort(IStrategy):
     
 class HeapSort(IStrategy):
     def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
-        return ...
+        data = list(data)
+        heapq.heapify(data)
+        return data
     
 class QuickSort(IStrategy):
     def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
