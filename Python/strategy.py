@@ -25,7 +25,7 @@ class SelectionSort(IStrategy):
 class HeapSort(IStrategy):
     def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
         data = list(data)
-        heapq.heapify(data)
+        heapq.heapify(data)  # It's inplace
         return data
     
 class QuickSort(IStrategy):
