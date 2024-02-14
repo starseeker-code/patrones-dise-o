@@ -38,10 +38,6 @@ class QuickSort(IStrategy):
         right = [number for number in data if number > pivot]  # Groups numbers that are MORE than the pivot
         return self.sorting_algorithm(left) + mid + self.sorting_algorithm(right)  # Recursively does the same until it adds 1-item ordered lists
     
-class RadixSort(IStrategy):
-    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
-        return ...
-    
 class MergeSort(IStrategy):
     @staticmethod
     def merge(left: Sequence[Number], right: Sequence[Number]) -> list[Number]:
@@ -68,10 +64,6 @@ class MergeSort(IStrategy):
         left = self.sorting_algorithm(left)  # Starts sorting the two halfs, recursively
         right = self.sorting_algorithm(right)
         return self.merge(left, right)  # Joins the (sorted) pieces of the sequence
-    
-class TimSort(IStrategy):
-    def sorting_algorithm(self, data: Sequence[Number]) -> list[Number]:
-        return ...
 
 # 3 - Create the context
 
@@ -121,6 +113,4 @@ if __name__ == "__main__":
     # Algorithm test
     print(Sorter(HeapSort(), test_data).sort())
     print(Sorter(QuickSort(), test_data).sort())
-    print(Sorter(RadixSort(), test_data).sort())
     print(Sorter(MergeSort(), test_data).sort())
-    print(Sorter(TimSort(), test_data).sort())
